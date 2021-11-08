@@ -22,6 +22,27 @@ v0/Order 만들기
 
 ### 로그추적기 v1 적용
 * HelloTraceV1
-  * begin, end, exception 메소드 제공
+  * TraceStatus begin(String message)
+  * void end(TraceStatus status)
+  * void exception(TraceStatus status, Exception e)
+
 * 적용방법
-  * 각 method 에서 TraceStatus 를 생성 & 종료(or 예외처리) 를 호출
+  * 각 함수에서 TraceStatus 를 생성 & 종료(or 예외처리) 를 호출
+
+* 문제점
+  * 메서드 호출의 깊이 표현
+  * HTTP 요청을 구분(트랜잭션 ID)
+  
+### 로그추적기 v2 적용
+* HelloTraceV2
+  * TraceStatus beginSync(TraceId beforeTraceId, String message) 추가
+  
+* 적용방법
+  * 각 함수를 호출할때 현재의 TraceId 를 파라미터로 전달
+  
+* 문제점
+  * HTTP 요청을 구분하기 위해 TraceId 를 동기화를 위해
+    * TraceId 의 동기화를 위해서 관련 메서드의 모든 파라미터를 수정해야함
+  * begin & beginSync 를 구분해서 호출해야 함
+  
+> TraceId 를 파라미터로 넘기는 거 말고 방법이 없나?
