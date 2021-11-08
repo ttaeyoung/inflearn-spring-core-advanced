@@ -16,3 +16,6 @@ v0/Order 만들기
 * HTTP 요청을 구분
   * HTTP 요청 단위로 특정 ID를 남겨서 어떤 HTTP 요청에서 시작된 것인지 명확하게 구분이 가능해야 함
   
+### 프로토 타입 만들기
+* TraceId: id, level 을 가지는 클래스 정의
+* TraceStatus: TraceId, start timestamp, message 를 가지는 클래스 정의
