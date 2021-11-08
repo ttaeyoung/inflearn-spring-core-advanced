@@ -19,3 +19,9 @@ v0/Order 만들기
 ### 프로토 타입 만들기
 * TraceId: id, level 을 가지는 클래스 정의
 * TraceStatus: TraceId, start timestamp, message 를 가지는 클래스 정의
+
+### 로그추적기 v1 적용
+* HelloTraceV1
+  * begin, end, exception 메소드 제공
+* 적용방법
+  * 각 method 에서 TraceStatus 를 생성 & 종료(or 예외처리) 를 호출
