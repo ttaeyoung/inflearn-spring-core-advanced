@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
-class ContextV2Test {
+public class ContextV2Test {
 
     /**
      * 전략 패턴 적용
