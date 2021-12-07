@@ -35,6 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+*.code-workspace
 
 ### extra file ###
 *.pdf
