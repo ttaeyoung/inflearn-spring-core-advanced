@@ -1,20 +1,20 @@
 
-package hello.proxy.app.v2;
+package hello.proxy.app.v3;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@RequestMapping
-@ResponseBody
-public class OrderControllerV2 {
+@RestController
+public class OrderControllerV3 {
 
-    private final OrderServiceV2 service;
-    private final static String VERSION = "v2";
+    private final OrderServiceV3 service;
+    private final static String VERSION = "v3";
 
-    public OrderControllerV2(OrderServiceV2 service) {
+    public OrderControllerV3(OrderServiceV3 service) {
         this.service = service;
     }
 
