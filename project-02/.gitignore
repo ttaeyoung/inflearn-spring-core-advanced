@@ -35,9 +35,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-### extra file ###
-*.pdf
-
-# Mac OS
-*.DS_Store
