@@ -3,4 +3,3 @@ rootProject.name = 'spring-core-advanced'
 include 'project-01'
 include 'project-02'
 include 'project-03'
-
